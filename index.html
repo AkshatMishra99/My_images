@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Detection Using Webcam</title>
+        <script src="face-api.min.js" defer></script>
+        <script src="script.js" defer></script>
+        <style>
+            @media only screen and (min-width: 768px) {
+                body {
+                    margin: 0;
+                    padding: 0;
+                    width: 100vh;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                video {
+                }
+                .vid-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                }
+            }
+            @media only screen and (max-width: 768px) {
+                body {
+                    display: flex;
+                    justify-content: center;
+                    object-fit: contain;
+                }
+                video {
+                }
+                .vid-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                }
+            }
+            canvas {
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="vid-container">
+            <video
+                src=""
+                id="my-video"
+                width="760px"
+                height="800px"
+                autoplay
+                muted
+            ></video>
+        </div>
+    </body>
+</html>
